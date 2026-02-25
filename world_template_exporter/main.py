@@ -6,7 +6,7 @@ import shutil
 def main():
     # 1. Parse settings (Regolith passes these as a JSON string in argv[1])
     try:
-        settings = json.loads(sys.argv[2]) if len(sys.argv) > 2 else {}
+        settings = json.loads(sys.argv[1]) if len(sys.argv) > 1 else {}
     except (json.JSONDecodeError, IndexError):
         settings = {}
 
@@ -20,7 +20,7 @@ def main():
         sys.exit(1)
         
     copy_packs = settings.get("copy_packs")
-    if not copy_packs:
+    if copy_packs is None:
         print("Error: 'copy_packs' is not defined in filter settings.")
         sys.exit(1)
     
