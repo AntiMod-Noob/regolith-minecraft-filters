@@ -30,7 +30,7 @@ def main():
 
     
     outpath=os.path.abspath("out")
-    buildPath=os.path.abspath("../build")
+    buildPath=os.path.abspath("../../build")
     if os.path.exists(outpath):
         shutil.rmtree(outpath)
     
