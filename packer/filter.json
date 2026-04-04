@@ -1,0 +1,11 @@
+{
+  "description": "Generates MCAddon file",
+  "filters": [
+    {
+      "name": "packer",
+      "runWith": "python",
+      "script": "main.py"
+    }
+  ],
+  "version": "1.0.0"
+}

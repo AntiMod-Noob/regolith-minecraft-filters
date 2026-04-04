@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "packer",
+  "type": "object",
+  "properties": {
+    "prebuild_commands": {
+      "type": "array",
+      "items": {
+        "type":"string"
+      },
+      "description": "The commands that will be executed before executing packer. These are console commands"
+    }
+  }
+}
